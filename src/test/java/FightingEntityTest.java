@@ -14,133 +14,134 @@ public class FightingEntityTest {
     private Player player = new Player(150, 6, 6);
 
     @Test
-    public void DoSomeRandomTest() {
+    public void testDoSomeRandom() {
         int result = FightingEntity.doSomeRandom(1, 10);
         assertThat(result, allOf(greaterThanOrEqualTo(1), lessThanOrEqualTo(10)));
     }
 
     @Test
-    public void IsSucceed_ReturnsTrue_WhenMinDamageHigherThan4() {
+    public void testIsSucceed_ReturnsTrue_WhenMinDamageHigherThan4() {
         FightingEntity player = new Player(150, 5, 5);
         boolean result = player.isSucceed(1);
         assertTrue(result);
     }
 
     @Test
-    public void IsSucceed_ReturnsFalse_WhenMinDamageEquals4() {
+    public void testIsSucceed_ReturnsFalse_WhenMinDamageEquals4() {
         FightingEntity player = new Player(150, 4, 4);
         boolean result = player.isSucceed(1);
         assertFalse(result);
     }
 
     @Test
-    public void IsSucceed_ReturnsFalse_WhenMinDamageLowerThan4() {
+    public void testIsSucceed_ReturnsFalse_WhenMinDamageLowerThan4() {
         FightingEntity player = new Player(150, 3, 3);
         boolean result = player.isSucceed(1);
         assertFalse(result);
     }
 
     @Test
-    public void IsSucceed_ReturnsFalse_WhenAttemptsLeftIs0() {
+    public void testIsSucceed_ReturnsFalse_WhenAttemptsLeftIs0() {
         FightingEntity fightingEntity = new Player(150, 10, 10);
         boolean result = fightingEntity.isSucceed(0);
         assertFalse(result);
     }
 
     @Test
-    public void GetAttackModifierTest() {
+    public void testGetAttackModifier() {
         assertTrue(defaultPlayer.getAttackModifier(defaultMonster) > 0);
     }
 
     @Test
-    public void getAttackModifier_Test_NegativeResidual() {
+    public void testGetAttackModifierNegativeResidual() {
         defaultPlayer.setAttack(15);
         defaultMonster.setDefence(20);
         assertEquals(1, (int) defaultPlayer.getAttackModifier(defaultMonster));
     }
 
     @Test
-    public void getAttackModifier_Test_WhenResidualEqualsZero() {
+    public void testGetAttackModifierWhenResidualEqualsZero() {
         defaultPlayer.setAttack(20);
         defaultMonster.setDefence(20);
         assertEquals(1, (int) defaultPlayer.getAttackModifier(defaultMonster));
     }
 
     @Test
-    public void getAttackModifier_Test_PositiveResidual() {
+    public void testGetAttackModifierPositiveResidual() {
         defaultPlayer.setAttack(20);
         defaultMonster.setDefence(15);
         assertTrue(defaultPlayer.getAttackModifier(defaultMonster) > 1);
     }
 
     @Test
-    public void couldBeHealed_PositiveTest() {
+    public void testCouldBeHealedPositive() {
         defaultPlayer.setHp(29);
         assertEquals(true, defaultPlayer.couldBeHealed(defaultPlayer));
     }
 
     @Test
-    public void couldBeHealed_NegativeTest() {
+    public void testCouldBeHealedNegative() {
         defaultPlayer.setHp(30);
         assertEquals(false, defaultPlayer.couldBeHealed(defaultPlayer));
     }
 
     @Test
-    public void couldBeHealed_NegativeTestIfAlreadyHealed4Times() {
+    public void testCouldBeHealed_NegativeIfAlreadyHealed4Times() {
         player.setHp(15);
         player.setCountOfHealing(4);
         assertEquals(false, defaultPlayer.couldBeHealed(defaultPlayer));
     }
 
     @Test
-    public void couldBeHealed_PositiveTestIfHealedLessThan4Times() {
+    public void testCouldBeHealed_PositiveIfHealedLessThan4Times() {
         player.setHp(15);
         player.setCountOfHealing(3);
         assertEquals(true, defaultPlayer.couldBeHealed(player));
     }
 
     @Test
-    public void couldBeHealed_Test_ReturnsFalseIfNotInstanceOfRegenerateAble() {
+    public void testCouldBeHealedReturnsFalseIfNotInstanceOfRegenerateAble() {
         defaultMonster.setHp(29);
         assertEquals(false, defaultPlayer.couldBeHealed(defaultMonster));
     }
 
     @Test
-    public void couldBeHealed_Test_ReturnsTrueIfInstanceOfRegenerateAble() {
+    public void testCouldBeHealedReturnsTrueIfInstanceOfRegenerateAble() {
         defaultPlayer.setHp(29);
         assertEquals(true, player.couldBeHealed(defaultPlayer));
     }
 
     @Test
-    public void doAttackTest_SetAttackSetDefenceWorksCorrect() {
+    public void testDoAttackSetAttackSetDefenceWorksCorrect() {
         defaultPlayer.doAttack(defaultMonster);
         assertTrue(defaultPlayer.getAttack() > 0 && defaultPlayer.getAttack() < 30);
         assertTrue(defaultMonster.getDefence() > 0 && defaultMonster.getDefence() < 30);
     }
 
     @Test
-    public void doAttackTest_playerDiesWhenHPLessThan1() {
+    public void testDoAttackPlayerDiesWhenHPLessThan1() {
         defaultPlayer.setHp(0);
         defaultMonster.doAttack(defaultPlayer);
         assertFalse(defaultPlayer.isAlive());
     }
 
     @Test
-    public void doAttackTest_monsterDiesWhenHPLessThan1() {
+    public void testDoAttackMonsterDiesWhenHPLessThan1() {
         defaultMonster.setHp(0);
         defaultPlayer.doAttack(defaultMonster);
         assertFalse(defaultMonster.isAlive());
     }
 
     @Test
-    public void healThePlayerTest() {
+    public void testHealThePlayer() {
         player.setHp(29);
         defaultMonster.doAttack(player);
         assertTrue(player.getCountOfHealing() > 0);
     }
 
     @Test
-    public void doDeathFightTest() {
+    public void testDoDeathFight() {
+        defaultPlayer.setHp(500_000_000);
         FightingEntity.doDeathFight(defaultPlayer, defaultMonster);
         assertTrue(defaultPlayer.isAlive());
     }

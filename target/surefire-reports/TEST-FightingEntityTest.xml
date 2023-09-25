@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="20" failures="0" name="FightingEntityTest" time="0.051" errors="0" skipped="0">
+  <properties>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="java.vm.version" value="17.0.4.1+1"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Eclipse Adoptium\jdk-17.0.4.101-hotspot\bin"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Users\User\IdeaProjects\OnlyBeOneLeft"/>
+    <property name="java.vm.vendor" value="Eclipse Adoptium"/>
+    <property name="java.vendor.url" value="https://adoptium.net/"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="path.separator" value=";"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="RU"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="test" value="FightingEntityTest"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="C:\Users\User\IdeaProjects\OnlyBeOneLeft"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="java.runtime.version" value="17.0.4.1+1"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\User\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="classworlds.conf" value="C:\Program Files\apache-maven-3.8.6\bin\m2.conf"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Eclipse Adoptium\jdk-17.0.4.101-hotspot\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Eclipse Adoptium\jdk-17.0.4.101-hotspot\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\User\IdeaProjects\Tools\gradle-7.5\bin;C:\Users\User\??? ??? ??????\Tools\apache-maven-3.8.6\bin;C:\Program Files\apache-maven-3.8.6\bin;C:\Program Files\PuTTY\;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Users\User\AppData\Local\Microsoft\WindowsApps;;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.2\bin;;C:\Program Files\JetBrains\IntelliJ IDEA 2022.2.1\bin;;C:\Users\User\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\User\AppData\Roaming\npm;."/>
+    <property name="maven.conf" value="C:\Program Files\apache-maven-3.8.6/conf"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="java.class.version" value="61.0"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.0"/>
+    <property name="library.jansi.path" value="C:\Program Files\apache-maven-3.8.6\lib\jansi-native"/>
+    <property name="user.home" value="C:\Users\User"/>
+    <property name="user.timezone" value="Europe/Moscow"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.specification.version" value="17"/>
+    <property name="user.name" value="User"/>
+    <property name="java.class.path" value="C:\Program Files\apache-maven-3.8.6\boot\plexus-classworlds-2.6.0.jar"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test -Dtest=FightingEntityTest"/>
+    <property name="java.home" value="C:\Program Files\Eclipse Adoptium\jdk-17.0.4.101-hotspot"/>
+    <property name="user.language" value="ru"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.version" value="17.0.4.1"/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Eclipse Adoptium"/>
+    <property name="sun.stderr.encoding" value="cp850"/>
+    <property name="maven.home" value="C:\Program Files\apache-maven-3.8.6"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.version.date" value="2022-08-12"/>
+    <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="java.vendor.version" value="Temurin-17.0.4.1+1"/>
+    <property name="sun.stdout.encoding" value="cp850"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase classname="FightingEntityTest" name="FightingEntityTest.testGetAttackModifier" time="0.001"/>
+  <testcase classname="FightingEntityTest" name="FightingEntityTest.testCouldBeHealedPositive" time="0"/>
+  <testcase classname="FightingEntityTest" name="FightingEntityTest.testCouldBeHealedNegative" time="0"/>
+  <testcase classname="FightingEntityTest" name="FightingEntityTest.testHealThePlayer" time="0.029"/>
+  <testcase classname="FightingEntityTest" name="FightingEntityTest.testDoDeathFight" time="0.009"/>
+  <testcase classname="FightingEntityTest" name="FightingEntityTest.testDoSomeRandom" time="0.01"/>
+  <testcase classname="FightingEntityTest" name="FightingEntityTest.testDoAttackSetAttackSetDefenceWorksCorrect" time="0"/>
+  <testcase classname="FightingEntityTest" name="FightingEntityTest.testIsSucceed_ReturnsTrue_WhenMinDamageHigherThan4" time="0"/>
+  <testcase classname="FightingEntityTest" name="FightingEntityTest.testIsSucceed_ReturnsFalse_WhenMinDamageEquals4" time="0"/>
+  <testcase classname="FightingEntityTest" name="FightingEntityTest.testIsSucceed_ReturnsFalse_WhenMinDamageLowerThan4" time="0.001"/>
+  <testcase classname="FightingEntityTest" name="FightingEntityTest.testIsSucceed_ReturnsFalse_WhenAttemptsLeftIs0" time="0"/>
+  <testcase classname="FightingEntityTest" name="FightingEntityTest.testGetAttackModifierNegativeResidual" time="0"/>
+  <testcase classname="FightingEntityTest" name="FightingEntityTest.testGetAttackModifierWhenResidualEqualsZero" time="0"/>
+  <testcase classname="FightingEntityTest" name="FightingEntityTest.testGetAttackModifierPositiveResidual" time="0"/>
+  <testcase classname="FightingEntityTest" name="FightingEntityTest.testCouldBeHealed_NegativeIfAlreadyHealed4Times" time="0"/>
+  <testcase classname="FightingEntityTest" name="FightingEntityTest.testCouldBeHealed_PositiveIfHealedLessThan4Times" time="0"/>
+  <testcase classname="FightingEntityTest" name="FightingEntityTest.testDoAttackMonsterDiesWhenHPLessThan1" time="0.001"/>
+  <testcase classname="FightingEntityTest" name="FightingEntityTest.testDoAttackPlayerDiesWhenHPLessThan1" time="0"/>
+  <testcase classname="FightingEntityTest" name="FightingEntityTest.testCouldBeHealedReturnsFalseIfNotInstanceOfRegenerateAble" time="0"/>
+  <testcase classname="FightingEntityTest" name="FightingEntityTest.testCouldBeHealedReturnsTrueIfInstanceOfRegenerateAble" time="0"/>
+</testsuite>
